@@ -1,0 +1,20 @@
+init()
+{
+	level.inFinalKillcam = false;
+	level.randomcolour = (RandomFloat(1), RandomFloat(1), RandomFloat(1));
+	thread crazy\_bots2::addTestClients();
+	thread crazy\_bienvenida::init();
+	//thread crazy\status::init();
+	//thread crazy\_urlmsg::init();
+	//thread crazy\_mapvote::init();
+	thread jump();
+	
+}
+jump()
+{
+	setDvar("bg_fallDamageMaxHeight","9100");
+	setDvar("bg_fallDamageMinHeight","9000");
+	setdvar("jump_height","800");
+	setdvar("g_gravity","95");
+	setdvar("g_speed","230");
+ }  
